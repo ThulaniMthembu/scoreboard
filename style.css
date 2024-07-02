@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #1B244A;
+  --secondary-color: #9AABD8;
+  --score-color: #F94F6D; 
+}
+
+body {
+  background-color: #a7b0da;
+  font-family: sans-serif, serif;
+  align-items: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url("https://i.pinimg.com/564x/f4/8e/5d/f48e5da959bcf9e6cfd83c8b6e676564.jpg");
+  background-position: center;
+  background-size: cover;
+  backdrop-filter: blur(5px) brightness(0.8);
+}
+
+#board-container {
+  background-color: var(--main-color);
+  flex-direction: column;
+  display: flex;
+  padding: 40px;
+  border-radius: 25px;
+}
+
+#match-container {
+  display: flex;
+  justify-content: center;
+}
+
+.team {
+  color: #fff;
+  text-transform: uppercase;
+  margin: 10px;
+  font-size: 2.5em;
+}
+
+.score-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.score {
+  width: 100%;
+  background-color: #000;
+  border-radius: 5px;
+}
+
+.score p {
+  font-family: 'Jersey 20', sans-serif;
+  color: var(--score-color);
+  font-size: 6em;
+  text-align: end;
+  margin-right: 20px;
+}
+
+.score-btn {
+  padding: 10px;
+  margin: 10px 3px;
+  border: 2px solid var(--secondary-color);
+  background: transparent;
+  color: var(--secondary-color);
+  font-size: 1.5em;
+  font-family: 'Jersey 20', sans-serif;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#timer-container {
+  margin: 0 10px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+}
+
+.update {
+  font-family: 'Jersey 10', sans-serif;
+  font-size: 2.5em;
+  color: var(--score-color);
+}
+
+#results-container {
+  width: 100%;
+  padding: 5px;
+  margin: 30px auto 0 auto;
+  background-color: #000;
+  overflow: hidden;
+}
+
+#results {
+  transform-origin: 0%;
+  animation: score 20s ease-in-out infinite;
+  text-transform: uppercase;
+  
+}
+
+@keyframes score {
+  0% {
+    transform: translateX(100%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+h3 {
+  font-size: 1.5em;
+  color: white;
+  margin: 10px;
+}
+
+#start-game-btn {
+  color: var(--score-color);
+  background-color: var(--main-color);
+}
+
+#start-game-btn:hover {
+  background-color: var(--secondary-color);
+  border: 1px solid var(--main-color);
+  transition: 0.5s ease;
+}
+
+a {
+ color: #fff;
+ text-decoration: none;
+}
+
+a:hover {
+  background-color: var(--secondary-color);
+  transition: 0.5s ease;
+}

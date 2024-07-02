@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basket Ball Scoreboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- results font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+    <!-- score font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+20&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <h3>Team with most points at the end of 1 minute wins.</h3>
+    <button
+      class="score-btn"
+      id="start-game-btn"
+      aria-label="Start match button"
+    >
+      Start
+    </button>
+
+    <div id="board-container">
+      <div id="match-container">
+        <!-- home score -->
+        <div class="score-container">
+          <h1 class="team">home</h1>
+          <div class="score">
+            <p class="score-display" id="home-score">0</p>
+          </div>
+          <div id="button-container">
+            <button
+              class="score-btn"
+              id="home-one-btn"
+              aria-label="Home team score 1 point"
+            >
+              + 1
+            </button>
+            <button
+              class="score-btn"
+              id="home-two-btn"
+              aria-label="Home team score 2 points"
+            >
+              + 2
+            </button>
+            <button
+              class="score-btn"
+              id="home-three-btn"
+              aria-label="Home team score 3 points"
+            >
+              + 3
+            </button>
+          </div>
+        </div>
+
+        <!--timer-->
+        <div id="timer-container">
+          <p class="update">Time</p>
+          <p class="update" id="time">00:00</p>
+        </div>
+
+        <!-- guest score -->
+        <div class="score-container">
+          <h1 class="team">guest</h1>
+          <div class="score">
+            <p class="score-display" id="guest-score">0</p>
+          </div>
+
+          <button-container>
+            <button
+              class="score-btn"
+              id="guest-one-btn"
+              aria-label="Guest team score 1 point"
+            >
+              + 1
+            </button>
+            <button
+              class="score-btn"
+              id="guest-two-btn"
+              aria-label="Guest team score 2 points"
+            >
+              + 2
+            </button>
+            <button
+              class="score-btn"
+              id="guest-three-btn"
+              aria-label="Guest team score 3 points"
+            >
+              + 3
+            </button>
+          </button-container>
+        </div>
+      </div>
+      <div id="results-container">
+        <p class="update" id="results">.....Welcome... Start Match.....</p>
+      </div>
+    </div>
+
+    <h3>Scoreboard by <a href="https://github.com/ThulaniMthembu" target="_blank">Thulani Mthembu</h3></a>
+
+    <script src="script.js"></script>
+  </body>
+</html>
